@@ -3,7 +3,7 @@ from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'dj3289fnij32908uhjcn329'
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 app.debug = True
 socketio = SocketIO(app)
 
