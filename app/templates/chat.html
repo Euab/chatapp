@@ -45,6 +45,25 @@
     <!-- JavaScript at the bottom to allow the document to load faster. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+
+    <script>
+      var socket = io.connect('http://localhost:5000/')
+      socket.on('connect', function() {
+        socket.emit('emit event', {
+          data : 'User connected'
+        })
+      })
+      var form = $('form').on('submit', function(e) {
+        e.preventDefault()
+        var user_name = $('input.username').val()
+        var message   = $('input.message').val()
+        console.log(user_name, message)
+      })
+      socket.on('resp', function(msg) {
+        console.log(msg)
+      })
+    </script>
 
   </body>
 </html>
