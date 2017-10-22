@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h1>404</h1>
+  <hr>
+  <p>
+    Looks like you haven't found what you were looking for. Here are some links that should help...
+  </p>
+  <ul class="jumbotron">
+    <li><a href="{{url_for('chat')}}"><i class="fa fa-commenting"></i> Live Chat</a></li>
+    <li><a href="{{url_for('index')}}"><li class="fa fa-home"></i> Home</a></li>
+  </ul>
+</div>
+{% endblock %}
