@@ -7,9 +7,23 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 app.debug = True
 socketio = SocketIO(app)
 
+@app.route('/')
+def index():
+	return render_template('index.html')
+
+@app.route('/about')
+def about():
+	return render_template('about.html')
+
 @app.route('/chat')
 def chat():
     return render_template('chat.html')
+
+@app.route('/login')
+def login():
+	#return render_template('login.html')
+	return "Login page ¯\_(ツ)_/¯"
+
 
 def messageRecived():
   print( 'message was received!!!' )

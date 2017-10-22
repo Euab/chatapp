@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChatApp | Home</title>
+	<meta charset="utf-8">
+	<meta name="author" content="">
+	<meta name="keywords" content="chat, friends, no friends, nerd">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/home-skin.css') }}">
+</head>
+<body>
+
+	<div class="container">
+		<nav class="navbar navbar-default">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="#">ChatApp</a>
+    			</div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="{{ url_for('login') }}">Login</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('chat') }}">Chat</a></li>
+    </ul>
+  			</div>
+		</nav>
+	</div>
+
+	<section id="Header">
+		<div class="container">
+			<h1>ChatApp</h1>
+		</div>
+	</section>
+
+	<section id="Info">
+		<div class="jumbotron">
+			<p>Talk with friends, yay.</p>
+		</div>
+	</section>
+
+
+	<style>
+		.navbar{
+			background: transparent;
+			border: 0;
+		}
+		body{
+			background: #2F4F4F;
+		}
+		.nav{
+			color: white;
+		}
+		#Header h1{
+			text-align: center;
+			color: white;
+			text-decoration: underline;
+		}
+		#Info .jumbotron{
+			background: #2F4F4F;
+		}
+		#Info p{
+			color: white;
+			text-align: center;
+
+		}
+    </style>
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
