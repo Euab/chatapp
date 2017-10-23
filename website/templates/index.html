@@ -6,64 +6,51 @@
 	<meta name="author" content="">
 	<meta name="keywords" content="chat, friends, no friends, nerd">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/home-skin.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='skin.css') }}">
 </head>
 <body>
-
-	<div class="container">
+	<section id="Navbar">
 		<nav class="navbar navbar-default">
   			<div class="container-fluid">
     			<div class="navbar-header">
-      				<a class="navbar-brand" href="#">ChatApp</a>
+      				<a class="navbar-brand" href="{{ url_for('index') }}">ChatApp</a>
     			</div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="{{ url_for('login') }}">Login</a></li>
-      <li><a href="{{ url_for('about') }}">About</a></li>
-      <li><a href="{{ url_for('chat') }}">Chat</a></li>
-    </ul>
+    			<ul class="nav navbar-nav">
+      				<li class="active"><a href="#">Home</a></li>
+      				<li><a href="{{ url_for('about') }}">About</a></li>
+      				<li><a href="{{ url_for('login') }}">Login</a></li>
+      				<li><a href="{{ url_for('chat') }}">Chat</a></li>
+    			</ul>
   			</div>
 		</nav>
-	</div>
-
-	<section id="Header">
-		<div class="container">
-			<h1>ChatApp</h1>
-		</div>
 	</section>
 
-	<section id="Info">
-		<div class="jumbotron">
+	<section id="Stuff">
+		<div class="container">
+			<div class="page-header">
+				<h1>ChatApp</h1>
+			</div>
 			<p>Talk with friends, yay.</p>
 		</div>
 	</section>
 
+	<section id="Newsletter">
+		<div class="container">
+			<form method="POST">
+				<div class="page-header">
+					<h2>Newsletter. Yay.</h2>
+				</div>
+	  			<div class="form-group">
+	    			<label for="exampleInputEmail1">Email address</label>
+	    			<input name="email_submit" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+	    			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+	  			</div>
+	  			<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</section>
 
-	<style>
-		.navbar{
-			background: transparent;
-			border: 0;
-		}
-		body{
-			background: #2F4F4F;
-		}
-		.nav{
-			color: white;
-		}
-		#Header h1{
-			text-align: center;
-			color: white;
-			text-decoration: underline;
-		}
-		#Info .jumbotron{
-			background: #2F4F4F;
-		}
-		#Info p{
-			color: white;
-			text-align: center;
 
-		}
-    </style>
 
 
 
