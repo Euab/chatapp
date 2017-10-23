@@ -11,7 +11,7 @@ mongo.connect('mongodb://127.0.0.1/chatapp', function(err, db) {
   console.log('Connected to the database')
 
   // Create WS connection
-  client.on('connection', function() {
+  client.on('connection', function(socket) {
     let chat = db.collection('chats');
 
     // Send status func
