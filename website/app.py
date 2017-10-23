@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from flask_socketio import SocketIO, emit
 import os
 import redis
@@ -46,11 +46,12 @@ def not_found(e):
 def email_submit():
   email = request.form.get('email_submit')
   db.append('user_email_list', email)
-  emaillist = db.smembers('user_email_list')
+  emaillist = db.get('user_email_list')
   with open('./test.txt', 'w') as test:
     print(emaillist, file=test)
+  return redirect(url_for('index'))
   
 
 if __name__ == '__main__':
   socketio.run( app, debug = True )
-  db.set('user_email_list', )
+  db.set('user_email_list', '')
