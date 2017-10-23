@@ -29,7 +29,7 @@ def login():
 	return "Login page ¯\_(ツ)_/¯"
 
 
-def messageRecived():
+def messageReceived():
   print( 'message was received!!!' )
 
 @socketio.on( 'emit event' )
