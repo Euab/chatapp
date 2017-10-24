@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChatApp | About</title>
+	<meta charset="utf-8">
+	<meta name="author" content="">
+	<meta name="keywords" content="chat, friends, no friends, nerd">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='skin.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.css">
+</head>
+<body>
+	<section id="Navbar">
+		<nav class="navbar navbar-default animated bounceInDown">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="{{ url_for('index') }}">ChatApp</a>
+    			</div>
+    			<ul class="nav navbar-nav">
+      				<li><a href="{{ url_for('index') }}">Home</a></li>
+      				<li class="active"><a href="{{ url_for('about') }}">About</a></li>
+      				<li><a href="{{ url_for('login') }}">Login</a></li>
+      				<li><a href="{{ url_for('chat') }}">Chat</a></li>
+    			</ul>
+  			</div>
+		</nav>
+	</section>
+
+  <section id="AboutInfo">
+    <div class="container-fluid">
+      <div class="jumbotron animated zoomIn">
+        <section id="AboutHeader">
+          <h1 class="animated rollIn">About ChatApp.</h1>
+        </section>
+        <p>ChatApp is just a place to chill with your friends. You may be telling yourself, "This looks terrible. I might aswell use Skype or Discord.". Well, it is terrible. That's what makes it great. The developers of this project are both thirteen, and would like someone to actually use this crap. Anyway, you can send messages to your peepz, and also change your online status if there is someone you are avoiding. Trust us, we know.</p>
+            <div class="jumbotron">
+              <section id="TakePart">
+                <section id="TakePartHeader">
+                  <h2>Development.</h2>
+                </section>
+                <section id="TakePartInfo">
+                  <p>Hi there. If you are a developer, then stay. If you aren't, then go ahead and use the darn app. So, developers. The team would be tremendously grateful if we could have someone help us with the development of ChatApp. It is not a paid job, as it is only a hobby for us, right now. This may change in the future, but if you want to take part then drop me an email @ttt0nk1e@gmail.com.</p>
+                </section>
+              </section>
+              <section id="DesktopApp">
+                <section id="DesktopAppHeader">
+                  <h2>Desktop Version.</h2>
+                </section>
+                <section id="DesktopAppInfo">
+                  <p>At the moment, our main priority is the web version. But, we do have plans to create a Desktop App version of ChatApp, that will hopefully be compatible with Windows, Mac OS, and Linux (we are Linux users ourselves).</p>
+                </section>
+              </section>
+              <section id="MobileApp">
+                <section id="MobileAppHeader">
+                  <h2>Mobile Version.</h2>
+                </section>
+                <p>At the moment, as I said before, our main priority is the web version. Then, it's the Desktop Version. After that, if we have gained enough users to keep us going, we will start working on the mobile version, compatible with iOS, and Android. But until then, there will most likely only be PC compatible versions, however the website is mobile-friendly.</p>
+              </section>
+            </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.min.js"></script>
+	<script>
+    $("#rotating").Morphext({
+        animation: "bounceIn",
+        separator: ",",
+        speed: 2000,
+        complete: function () {
+        }
+    });
+    </script>
+</body>
