@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_socketio import SocketIO, emit
 import os
 import redis
 
@@ -9,7 +8,6 @@ db = redis.Redis.from_url("redis://localhost", decode_responses=True)
 
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 app.debug = True
-socketio = SocketIO(app)
 
 @app.route('/')
 def index():
@@ -32,11 +30,6 @@ def login():
 def messageReceived():
   print( 'message was received!!!' )
 
-@socketio.on( 'emit event' )
-def handler( json ):
-  print( 'recived emit event: ' + str( json ) )
-  socketio.emit( 'resp', json, callback=messageRecived )
-
 # Handling HTTP errors
 @app.errorhandler(404)
 def not_found(e):
@@ -50,8 +43,8 @@ def email_submit():
   with open('./test.txt', 'w') as test:
     print(emaillist, file=test)
   return redirect(url_for('index'))
-  
+
 
 if __name__ == '__main__':
-  socketio.run( app, debug = True )
+  app.run()
   db.set('user_email_list', '')
