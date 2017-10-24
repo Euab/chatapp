@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChatApp | Login</title>
+	<meta charset="utf-8">
+	<meta name="author" content="">
+	<meta name="keywords" content="chat, friends, no friends, nerd">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='skin.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.css">
+</head>
+
+<body>
+	<section id="Navbar">
+		<nav class="navbar navbar-default animated bounceInDown">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="{{ url_for('index') }}">ChatApp</a>
+    			</div>
+    			<ul class="nav navbar-nav">
+      				<li><a href="#">Home</a></li>
+      				<li><a href="{{ url_for('about') }}">About</a></li>
+      				<li class="active"><a href="{{ url_for('login') }}">Login</a></li>
+      				<li><a href="{{ url_for('chat') }}">Chat</a></li>
+    			</ul>
+  			</div>
+		</nav>
+	</section>
+	<section id="Login">
+		<div class="container">
+			<div class="jumbotron animated zoomIn">
+				<section id="LoginForm">
+					<form class="form-signin">
+        				<h2 class="form-signin-heading">Log in.</h2>
+        				<label for="inputEmail" class="sr-only">Email address.</label>
+        				<input type="email" id="inputEmail" class="form-control" placeholder="Email address..." required autofocus>
+        				<label for="inputPassword" class="sr-only">Password.</label>
+        				<input type="password" id="inputPassword" class="form-control" placeholder="Password..." required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log in.</button>
+      </form>
+
+    </div> 
+				</section>
+			</div>
+		</div>
+	</section>

@@ -46,7 +46,7 @@ def about():
 
 @app.route('/chat')
 def chat():
-    return render_template('chat.html')
+  return render_template('chat.html')
 
 
 # Login logic
@@ -96,9 +96,6 @@ def login():
       else:
         # Username does not exist
         return str("Can't find accout " + username)
-
-def messageReceived():
-  print( 'message was received!!!' )
 
 # Handling HTTP errors
 @app.errorhandler(404)
