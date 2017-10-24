@@ -1,0 +1,30 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "A simple clean and easy to use chatapp",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Euab/chatapp.git"
+  },
+  "keywords": [
+    "chat",
+    "talk",
+    "friends",
+    "internet",
+    "servers",
+    "live-chat"
+  ],
+  "author": "Euab, Tonk1e",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Euab/chatapp/issues"
+  },
+  "homepage": "https://github.com/Euab/chatapp#readme",
+  "dependencies": {
+    "electron": "^1.7.9"
+  }
+}

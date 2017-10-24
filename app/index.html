@@ -33,18 +33,19 @@
         </div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket,io/2.0.3/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
     <script>
       (function() {
         var element = function(id) {
           return document.getElementById(id);
         }
         // Get elements
-        var status   = element('status')
-        var messages = element('messages')
-        var textarea = element('textarea')
-        var nickname = element('nickname')
-        var clear    = element('clear')
+        var status   = element('status');
+        var messages = element('messages');
+        var textarea = element('textarea');
+        var nickname = element('nickname');
+        var clear    = element('clear');
         // Default status
         var statusDefault = status.textContent;
         var setStatus = function(s) {
@@ -59,6 +60,56 @@
           }
 
         }
+
+        // Connect to mongo server
+        // This can be executed by both the app and the website allowing for
+        // A centralized place for storage.
+        var socket = io.connect('http://127.0.0.1:4000');
+
+        // Check for a connection
+        if(socket !== undefined) {
+          console.log('Connect to WS with success');
+
+          // Output handler
+          socket.on('out', function(data) {
+            if(data.length) {
+              for(var x = 0;x < data.length;x++) {
+                // Build msg div
+                var message = document.createElement('div');
+                message.setAttribute('class', 'chat-message');
+                message.textContent = data[x].name+": "+data
+                [x].message;
+                messages.appendChild(message);
+                messages.insertBefore(message, messages.firstChild);
+
+              }
+            }
+          });
+          // Get status from chat-server
+          socket.on('status', function() {
+            // get message status
+            setStatus((typeof data === 'object')? data.message : data);
+
+            // Is the status set to clear?
+            if(data.clear) {
+              textarea.value = '';
+            }
+          });
+
+          // Input handler
+          textarea.addEventListener('keydown', function(event) {
+            if(event.which === 13 && event.shiftKey == false) {
+              // Emit message to server
+              socket.emit('input', {
+                name: nickname.value,
+                message: textarea.value,
+              });
+
+              event.preventDefault();
+            }
+          });
+        }
+
       })();
     </script>
   </body>
