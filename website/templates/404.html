@@ -1,18 +1,29 @@
 {% extends 'error-base.html' %}
 {% block content %}
 <div class="container">
-  <div class="not-found">
-    <h1 style="font-size: 100px">404</h1>
-    <br>
-    <h2>You find yourself in a strange place; nothing is here</h2>
-    <p>
-      You find yourself in a webpage where there is nothing to be found.
-      Other than a paragraph that tells you that there is nothing to be found.
-    </p>
-    <hr>
-    <p>
-      <a href="{{ url_for('index')}}" class="btn btn-primary btn-large">Go back</a>
-    </p>
+  <div class="animated fadeInUp">
+    <div class="not-found">
+      <h1 style="font-size: 100px">404</h1>
+      <br>
+      <h2>You find yourself in a strange place; nothing is here</h2>
+      <p>
+        You find yourself in a webpage where there is nothing to be found.
+        Other than a paragraph that tells you that there is nothing to be found.
+      </p>
+      <hr>
+      <p>
+        <a href="{{ url_for('index')}}" class="btn btn-primary btn-large">Go back</a>
+      </p>
+    </div>
   </div>
 </div>
+<script>
+  $("#rotating").Morhphext({
+    animation: "fadeIn"
+    separator: ",",
+    speed: 2000,
+    complete: function() {
+    }
+  });
+</script>
 {% endblock %}
