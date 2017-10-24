@@ -7,10 +7,12 @@
 	<meta name="keywords" content="chat, friends, no friends, nerd">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="{{ url_for('static', filename='skin.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.css">
 </head>
 <body>
 	<section id="Navbar">
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default animated bounceInDown">
   			<div class="container-fluid">
     			<div class="navbar-header">
       				<a class="navbar-brand" href="{{ url_for('index') }}">ChatApp</a>
@@ -25,24 +27,30 @@
 		</nav>
 	</section>
 
-	<section id="Stuff">
-		<div class="container">
-			<div class="page-header">
-				<h1>ChatApp</h1>
-			</div>
-			<p>Talk with friends, yay.</p>
+	<section id="Stuff" class="animated fadeInUp">
+		<div class="page-header">
+			<h1 class="animated wobble">ChatApp</h1>
+			<p class="animated jello infinite">Talk with friends, yay.</p>
 		</div>
 	</section>
 
-	<section id="Newsletter">
-		<div class="container">
-			<form method="POST">
-				<div class="page-header">
-					<h2>Newsletter. Yay.</h2>
-				</div>
+	<section id="Info" class="animated fadeInUp">
+		<div class="jumbotron">
+			<h2>Info.</h2>
+			<p>ChatApp is a place where you can speak to your friends, within the comfort of your own home. Learn more below.</p>
+			<button type="button" href="{{ url_for('about') }}" class="btn btn-success">About</button>
+		</div>
+	</section>
+
+	<section id="Newsletter" class="animated fadeInUp">
+		<div class="jumbotron">
+			<form method="GET">
+				<h2>Newsletter.</h2>
 	  			<div class="form-group">
-	    			<label for="exampleInputEmail1">Email address</label>
-	    			<input name="email_submit" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+	    			<label for="exampleInputEmail1">Email address.</label>
+	    			<div class="container">
+	    				<input name="email_submit" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email...">
+	    			</div>
 	    			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 	  			</div>
 	  			<button type="submit" class="btn btn-primary">Submit</button>
@@ -50,14 +58,28 @@
 		</div>
 	</section>
 
-
-
-
-
-
+	<section id="Copyright" class="animated fadeInUp">
+		<footer>
+			<div class="container-fluid">
+				<div class="well">
+					<p">Copyright &copy; X2 2017</p>
+				</div>
+			</div>
+		</footer>
+	</section>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.min.js"></script>
+	<script>
+    $("#rotating").Morphext({
+        animation: "bounceIn",
+        separator: ",",
+        speed: 2000,
+        complete: function () {
+        }
+    });
+    </script>
 </body>
 </html>
