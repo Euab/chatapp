@@ -12,7 +12,7 @@ flash, abort
 app = Flask(__name__)
 db = redis.Redis.from_url("redis://localhost", decode_responses=True)
 
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SECRET_KEY'] = os.urandom(24)
 client = MongoClient('mongodb://127.0.0.1:27017/')
 mongo = client['accounts_db']
 collection = mongo['accounts']
@@ -92,10 +92,16 @@ def login():
       if password_hash == collection.find_one({"Username": username})['Password']:
         # The password hash matches. Log in
         # This string is just a placeholder until the dashboard is made.
+        session['username'] = username
         return str("You have been logged in as username " + username)
       else:
         # Username does not exist
         return str("Can't find accout " + username)
+
+@app.route('/logout')
+def logout():
+  session.pop('username')
+  return redirect(url_for('index'))
 
 # Handling HTTP errors
 @app.errorhandler(404)
