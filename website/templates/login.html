@@ -19,7 +19,7 @@
       				<a class="navbar-brand" href="{{ url_for('index') }}">ChatApp</a>
     			</div>
     			<ul class="nav navbar-nav">
-      				<li><a href="#">Home</a></li>
+      				<li><a href="{{ url_for('index') }}">Home</a></li>
       				<li><a href="{{ url_for('about') }}">About</a></li>
       				<li class="active"><a href="{{ url_for('login') }}">Login</a></li>
       				<li><a href="{{ url_for('chat') }}">Chat</a></li>
@@ -45,7 +45,7 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Log in.</button>
       </form>
 
-    </div> 
+    </div>
 				</section>
 			</div>
 		</div>
