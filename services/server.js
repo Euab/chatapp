@@ -41,7 +41,7 @@ mongo.connect('mongodb://127.0.0.1/chatapp', function(err, db) {
 
       } else {
         // Insert valid message
-        chat.insert({name: name, message: message} function() {
+        chat.insert({name: name, message: message}, function() {
           client.emit('out', [data]);
 
           // Send success status

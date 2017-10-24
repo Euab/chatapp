@@ -1,7 +1,7 @@
 {
-  "name": "chatapp",
+  "name": "services",
   "version": "1.0.0",
-  "description": "A simple websocket chat app",
+  "description": "Server-side scripts for ChatApp",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/Euab/chatapp#readme",
   "dependencies": {
-    "electron": "^1.7.9",
     "mongodb": "^2.2.33",
     "socket.io": "^2.0.4"
   }
