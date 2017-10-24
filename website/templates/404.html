@@ -1,14 +1,18 @@
-{% extends 'base.html' %}
+{% extends 'error-base.html' %}
 {% block content %}
 <div class="container">
-  <h1>404</h1>
-  <hr>
-  <p>
-    Looks like you haven't found what you were looking for. Here are some links that should help...
-  </p>
-  <ul class="jumbotron">
-    <li><a href="{{url_for('chat')}}"><i class="fa fa-commenting"></i> Live Chat</a></li>
-    <li><a href="{{url_for('index')}}"><li class="fa fa-home"></i> Home</a></li>
-  </ul>
+  <div class="not-found">
+    <h1 style="font-size: 100px">404</h1>
+    <br>
+    <h2>You find yourself in a strange place; nothing is here</h2>
+    <p>
+      You find yourself in a webpage where there is nothing to be found.
+      Other than a paragraph that tells you that there is nothing to be found.
+    </p>
+    <hr>
+    <p>
+      <a href="{{ url_for('index')}}" class="btn btn-primary btn-large">Go back</a>
+    </p>
+  </div>
 </div>
 {% endblock %}
