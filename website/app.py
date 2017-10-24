@@ -38,6 +38,10 @@ app.jinja_env.globals['csrf_token'] = generate_csrf_token
 def index():
 	return render_template('index.html')
 
+@app.route('/signup')
+def signup():
+  return render_template('register.html')
+
 
 @app.route('/about')
 def about():
