@@ -27,10 +27,22 @@
     }
   </style>
 
-    <div class="container-fluid">
-      <div class="well text-center">
-        <h4>Chatroom</h4>
-      </div>
+      <section id="Navbar">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{{ url_for('index') }}">ChatApp</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="{{ url_for('index') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About</a></li>
+              <li><a href="{{ url_for('login') }}">Login</a></li>
+              <li class="active"><a href="{{ url_for('chat') }}">Chat</a></li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+
       <div class="col-sm-8">
         <div id="nomsg">
           <h1 style="color: #ccc">You don't have any messages!</h1>
