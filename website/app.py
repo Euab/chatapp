@@ -23,10 +23,8 @@ def chat():
 
 @app.route('/login')
 def login():
-	#return render_template('login.html')
-	return "Login page ¯\_(ツ)_/¯"
-
-
+	return render_template('login.html')
+  
 def messageReceived():
   print( 'message was received!!!' )
 
