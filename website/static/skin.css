@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .home-skin {
   background-color: #2d2d2d;
 }
@@ -89,3 +90,95 @@ p{
 
 
 
+=======
+.home-skin {
+  background-color: #2d2d2d;
+}
+
+.jumbotron{
+	background: #DCDCDC;
+}
+
+p{
+	font-size: 20px;
+}
+
+#Newsletter{
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+#Stuff{
+	text-align: center;
+}
+
+#Info h2{
+	font-weight: bold;
+	color: #2F4F4F;
+
+}
+
+#Info{
+	text-align: center;
+}
+
+#Newsletter h2{
+	font-weight: bold;
+	color: #2F4F4F;
+
+}
+
+#Newsletter{
+	text-align: center;
+}
+
+.placeholder{
+	text-align: center;
+}
+#Copyright{
+	text-align: center;
+}
+
+#AboutHeader .container{
+	text-align: center;
+	padding-top: -2%;
+	padding-bottom: -2%;
+	color: #2F2F2F;
+	background-color: #DCDCDC;
+}
+
+#AboutHeader{
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+#TakePartHeader h2{
+	text-align: center;
+	font-weight: bold;
+	color: #2F4F4F;
+}
+
+#DesktopAppHeader h2{
+	text-align: center;
+	font-weight: bold;
+	color: #2F4F4F;
+}
+
+#MobileAppHeader h2{
+	text-align: center;
+	font-weight: bold;
+	color: #2F4F4F;
+}
+
+#Login .container{
+	padding-top: 5%;
+}
+
+#SignUp .container{
+	padding-top: 5%;
+}
+
+
+
+
+>>>>>>> 96267f7f5754e634862078fc11a205df0d34eeac
