@@ -100,7 +100,7 @@ def login():
         return str("You have been logged in as username " + username)
       else:
         # Username does not exist
-        return str("Can't find accout " + username)
+        return str("Can't find account " + username)
 
 @app.route('/logout')
 def logout():
