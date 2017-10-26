@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const electron = require('electron')
 const path  = require('path');
 const url = require('url')
@@ -18,7 +17,7 @@ app.on('ready', function() {
     slashes: true
   }));
 });
-=======
+
 const electron = require("electron")
 const log = require("electron-log")
 const ipcMain = electron.ipcMain
@@ -81,4 +80,3 @@ app.on('activate', function() {
     createWindow()
   }
 })
->>>>>>> 96267f7f5754e634862078fc11a205df0d34eeac
