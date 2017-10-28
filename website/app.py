@@ -126,3 +126,4 @@ def email_submit():
 if __name__ == '__main__':
   app.run()
   db.set('user_email_list', '')
+
