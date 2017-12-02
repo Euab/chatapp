@@ -1,2 +1,2 @@
 # Chat app: Depreciated
-We are trying to make a chat app.
+We are not trying to make a chat app.
